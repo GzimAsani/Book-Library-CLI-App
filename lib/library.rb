@@ -2,7 +2,7 @@ require 'json'
 require_relative 'book'
 
 class Library
-  FILE_PATH = '../data/books.json'
+  FILE_PATH = 'data/books.json'
 
   def initialize
     @books = load_books
@@ -15,12 +15,12 @@ class Library
 
   def list_books
     @books.each_with_index do |book, i|
-      puts "#{i + 1}. #{book.title} by #{book.athor}, genre: #{book.genre}"
+      puts "#{i + 1}. #{book.title} by #{book.author}, genre: #{book.genre}"
     end
   end
 
   def search_books(term)
-    @book.select do |book|
+    @books.select do |book|
       [book.title, book.author, book.genre].any? { |field| field.downcase.include?(term.downcase) }
     end
   end
@@ -45,3 +45,12 @@ class Library
     File.write(FILE_PATH, JSON.pretty_generate(data))
   end
 end
+
+# library = Library.new
+
+# books = [
+#   Book.new(title: "1984", author: "Orwell", genre: "Dystopian"),
+#   Book.new(title: "The Hobbit", author: "Tolkien", genre: "Fantasy")
+# ]
+
+# books.each { |book| library.add_book(book) }
