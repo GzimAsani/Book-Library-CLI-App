@@ -17,14 +17,14 @@ class Book
 
   def self.from_hash(hash)
     # p "test #{hash}"
-    new(title: hash["title"], author: hash["author"], genre: ["genre"])
+    new(title: hash["title"], author: hash["author"], genre: hash["genre"])
   end
 
 end
 
-hash = { "title" => "The Hobbit", "author" => "J.R.R. Tolkien", "genre" => "Fantasy" }
+# hash = { "title" => "The Hobbit", "author" => "J.R.R. Tolkien", "genre" => "Fantasy" }
 
 
-p Book.from_hash(hash)
+# p Book.from_hash(hash)
 
 
