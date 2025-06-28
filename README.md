@@ -25,15 +25,7 @@ This project is perfect for practicing **Object-Oriented Programming**, **file I
 ---
 
 ## 📦 Project Structure
-
-book_library/
-├── data/
-│ └── books.json # Stored data file
-├── lib/
-│ ├── book.rb # Book class (model)
-│ └── library.rb # Library class (manager)
-├── main.rb # CLI entry point
-└── README.md # Project overview
+<pre> ```text 📦 book_library/ ├── data/ │ └── books.json # Stored data file ├── lib/ │ ├── book.rb # Book class (model) │ └── library.rb # Library class (manager) ├── main.rb # CLI entry point └── README.md # Project overview ``` </pre>
 
 yaml
 Copy
